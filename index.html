@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talent Hunters LK</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Talent Hunters LK</h1>
+        <div class="search-container">
+            <input type="text" placeholder="Search for jobs...">
+        </div>
+        <a href="admin.html" class="admin-link">Admin</a>
+    </header>
+    <main>
+        <div class="job-list">
+            <div class="job">
+                <h2>Job Title</h2>
+                <p><strong>Company:</strong> Company Name</p>
+                <p><strong>Location:</strong> Location</p>
+                <p><strong>Job Type:</strong> Remote</p>
+                <p><strong>Tech Stack:</strong> <span class="tech-stack">HTML, CSS, JavaScript</span></p>
+                <p class="short-description">Short description of the job...</p>
+                <button class="show-more-btn" onclick="toggleDescription(this)">Show More</button>
+                <p class="full-description" style="display:none;">Full job description goes here...</p>
+                <a href="mailto:talenthunters.lk@gmail.com" class="apply-btn">Apply Now</a>
+            </div>
+            <!-- Repeat similar job blocks for other jobs -->
+        </div>
+    </main>
+    <script>
+        function toggleDescription(btn) {
+            const fullDescription = btn.nextElementSibling;
+            if (fullDescription.style.display === "none") {
+                fullDescription.style.display = "block";
+                btn.textContent = "Show Less";
+            } else {
+                fullDescription.style.display = "none";
+                btn.textContent = "Show More";
+            }
+        }
+    </script>
+</body>
+</html>
